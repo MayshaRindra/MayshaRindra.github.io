@@ -1,0 +1,128 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Dadu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- game Dadu -->
+    <!-- konsep ada 2 pemain dadu bermain secara bergantian
+    setiap pemain memiliki kesempatan 6x bermain sekali putaran->
+     setelah 6x putaran selesai maka akan keluar hasil score dan pemenang  -->
+    <div class="container">
+        <!-- start of player 0 panel  -->
+        <div class="gamebox player-0-panel player-active">
+            <h1 class="player-name" id="name-0">Player 1</h1>
+            <p class="player-score" id="score-0">0</p>
+            <div class="player-current">
+                <p class="player-current-label">Current</p>
+                <p class="player-current-score" id="current-0">0</p>
+            </div>
+        </div>
+
+        <!-- end of player 0 panel  -->
+         <!-- start of player 1 panel  -->
+         <div class="gamebox player-1-panel">
+            <h1 class="player-name" id="name-1">Player 2</h1>
+            <p class="player-score" id="score-1">0</p>
+            <div class="player-current">
+                <div class="player-current-label">Current</div>
+                <div class="player-current-score" id="current-1">0</div>
+            </div>
+        </div>
+        <!-- end of player 1 panel  -->
+
+        <!-- BUTTON  -->
+        <!-- <img src="image/dadu1.png" alt="" class="dadu"> -->
+        <button class="btn btn-new">New Game</button>
+        <!-- START DADU ROLL -->
+        <div class="dadu-container">
+            <div id="dadu1" class="dadu dadu-satu">
+                <div id="dadu-satu-side-satu" class="side satu">
+                    <div class="dot satu-1"></div>
+                </div>
+                <div id="dadu-satu-side-dua" class="side dua">
+                    <div class="dot dua-1"></div>
+                    <div class="dot dua-2"></div>
+                </div>
+                <div id="dadu-satu-side-tiga" class="side tiga">
+                    <div class="dot tiga-1"></div>
+                    <div class="dot tiga-2"></div>
+                    <div class="dot tiga-3"></div>
+                </div>
+                <div id="dadu-satu-side-empat" class="side empat">
+                    <div class="dot empat-1"></div>
+                    <div class="dot empat-2"></div>
+                    <div class="dot empat-3"></div>
+                    <div class="dot empat-4"></div>
+                </div>
+                <div id="dadu-satu-side-lima" class="side lima">
+                    <div class="dot lima-1"></div>
+                    <div class="dot lima-2"></div>
+                    <div class="dot lima-3"></div>
+                    <div class="dot lima-4"></div>
+                    <div class="dot lima-5"></div>
+                </div>
+                <div id="dadu-satu-side-enam" class="side enam">
+                    <div class="dot enam-1"></div>
+                    <div class="dot enam-2"></div>
+                    <div class="dot enam-3"></div>
+                    <div class="dot enam-4"></div>
+                    <div class="dot enam-5"></div>
+                    <div class="dot enam-6"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="dadu-container">
+            <div id="dadu2" class="dadu dadu-dua">
+                <div id="dadu-dua-side-satu" class="side satu">
+                    <div class="dot satu-1"></div>
+                </div>
+
+                <div id="dadu-dua-side-dua" class="side dua">
+                    <div class="dot dua-1"></div>
+                    <div class="dot dua-2"></div>
+                </div>
+                <div id="dadu-dua-side-tiga" class="side tiga">
+                    <div class="dot tiga-1"></div>
+                    <div class="dot tiga-2"></div>
+                    <div class="dot tiga-3"></div>
+                </div>
+                <div id="dadu-dua-side-empat" class="side empat">
+                    <div class="dot empat-1"></div>
+                    <div class="dot empat-2"></div>
+                    <div class="dot empat-3"></div>
+                    <div class="dot empat-4"></div>
+                </div>
+                <div id="dadu-dua-side-lima" class="side lima">
+                    <div class="dot lima-1"></div>
+                    <div class="dot lima-2"></div>
+                    <div class="dot lima-3"></div>
+                    <div class="dot lima-4"></div>
+                    <div class="dot lima-5"></div>
+                </div>
+                <div id="dadu-dua-side-enam" class="side enam">
+                    <div class="dot enam-1"></div>
+                    <div class="dot enam-2"></div>
+                    <div class="dot enam-3"></div>
+                    <div class="dot enam-4"></div>
+                    <div class="dot enam-5"></div>
+                    <div class="dot enam-6"></div>
+                </div>
+            </div>
+        </div>
+        <!-- END DADU ROLL -->
+        <div id="roll">
+            <button class="btn btn-roll">Roll Dice</button>
+        </div>
+        <button class="btn btn-hold">Hold</button>
+        <!-- <input type="text" placeholder="Final score" class="final-score"> -->
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>

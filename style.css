@@ -1,0 +1,322 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+
+.hidden {
+    display: none;
+}
+
+html {
+    box-sizing: border-box;
+}
+body {
+    font-weight: 400;
+    height: 120vh;
+    color: #444;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.container {
+    width: 75rem;
+    height: 38rem;
+    top: 50px;
+    margin: 5rem auto;
+    border: 1px solid black;
+    position: relative;
+    background-color: rgba(255,255,255,0.35);
+    border-radius: 8px;
+    box-shadow: 0 3rem 5rem rgba(0, 0, 0, .25);
+    display: flex;
+    overflow: hidden;
+    filter: blur();
+    text-align: center;
+    
+}
+.gamebox{
+    flex: 50%;
+    padding: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all .75s;
+}
+
+.player-name {
+    position: relative;
+    font-size: 3rem;
+    padding-bottom: 2px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    word-spacing: 2px;
+    font-weight: 300;
+    margin-bottom: 1rem;
+}
+
+.player-score{
+    font-size: 7rem;
+    padding-top: 70px;
+    font-weight: 300;
+    color: #041C32;
+    margin-bottom: auto;
+}
+
+.player-active {
+    background-color: rgba(255,255,255, .4);
+}
+
+.player-active .player-name {
+    font-weight: 700;
+}
+.player-active .player-name::after {
+    font-weight: 700;
+    font-size: 47px;
+    position: absolute;
+    color: #174ea6;
+    top: -7px;
+    right: 10px;
+}
+
+.player-active .player-score {
+    font-weight: 400;
+}
+
+.player-active .player-current {
+    opacity: 1;
+}
+
+
+.player-current {
+    background-color: #041C32;
+    opacity: 0.8;
+    color: white;
+    border-radius: 9px;
+    width: 50%;
+    text-align: center;
+    transition: all .75s;
+}
+
+.player-current-label {
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    padding: 10px;
+    font-size: 1rem;
+    color: white;
+}
+
+.player-current-score {
+    font-size: 3.5rem;
+}
+
+.player-winner {
+    font-weight: #2f2f2f;
+}
+.player-winner .player-name {
+    font-weight: 700;
+    color: #174ea6;
+}
+
+/* From cssbuttons.io by @bhaveshxrawat */
+.btn {
+    background-color: #fff;
+    border-radius: 30px;
+    border-style: none;
+    box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
+    box-sizing: border-box;
+    color: #3c4043;
+    font-size: 14px;
+    font-weight: 300;
+    font-family: inherit;
+    letter-spacing: .20px;
+    line-height: normal;
+    padding: 11px 24px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    text-transform: uppercase;
+    backdrop-filter: blur(10px);
+   }
+   
+   .btn:hover {
+    background: #F6F9FE;
+    color: #174ea6;
+   }
+   
+   .btn:active {
+    box-shadow: 0 4px 4px 0 rgb(60 64 67 / 30%), 0 8px 12px 6px rgb(60 64 67 / 15%);
+    outline: none;
+    border: 2px solid #4285f4;
+   }
+
+.btn-new {
+    top: 4rem;
+}
+.btn-roll {
+    top: 26rem;
+}
+.btn-hold{
+    top:30rem;
+}
+
+.final-score {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top:530px;
+    color: #222831;
+    font-size: 18px!important;
+    font-family: 'lato';
+    text-align: center;
+    padding: 10px;
+    width: 150px;
+    text-transform: uppercase;
+}
+.final-score:focus {
+    background: #ccc;
+    outline: none;
+}
+/* .btn:active {
+    transform: translate(-50%, 3px);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+}
+
+.btn:focus{
+    outline: none;
+} */
+.dadu-container {
+    position: absolute;
+    display: inline-block;
+    top:20px;
+    left: 31.6rem;
+}
+
+
+.dadu {
+    position: relative;
+    width: 90px;
+    height: 90px;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+    top:8rem;
+    left: 50%;
+}
+
+.dot {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    margin: -10px 5px 5px -10px;
+    border-radius: 20px;
+    background-color: #064663;
+    box-shadow: inset 2px 2px #041C32;
+}
+
+.dadu-satu {
+    left: 46px;
+}
+.dadu-dua {
+    left: 46px;
+    top: 16.3rem;
+}
+
+.side {
+    position: absolute;
+    background: hsla(238, 100%, 63%, 0.8);
+    border-radius: 5px;
+    width: 90px;
+    height: 90px;
+    border: 1px solid #e5e5e5;
+    text-align: center;
+    line-height: 2em;
+}
+.side:nth-child(1) {
+    transform: translateZ(3.1em);
+}
+
+.side:nth-child(6) {
+    transform: rotateX(90deg) translateZ(3.1em);
+}
+
+.side:nth-child(3) {
+    transform: rotateX(-90deg) translateZ(3.1em);
+}
+
+.side:nth-child(4) {
+    transform: rotateY(90deg) translateZ(3.1em);
+}
+
+.side:nth-child(5) {
+    transform: rotateY(-90deg) translateZ(3.1em);
+}
+
+.side:nth-child(2) {
+    transform: rotateY(180deg) translateZ(3.1em);
+}
+
+ 
+.empat-2, .lima-4{
+    top: 80%;
+    left: 20%;
+}
+
+.dua-1, .tiga-1, .empat-1, .lima-1, .enam-1 {
+    top:20%;
+    left: 20%;
+}
+
+.empat-3, .lima-3, .enam-4 {
+    top:20%;
+    left: 80%;
+}
+
+.satu-1, .tiga-2, .lima-5{
+    top: 50%;
+    left: 50%;
+}
+
+ .lima-2 {
+    top: 80%;
+    left: 80%;
+}
+
+.empat-2, .enam-3 {
+    top: 80%;
+    left: 20%;
+}
+
+.dua-2, .tiga-3, .empat-4, .enam-6 {
+    top: 80%;
+    left: 80%;
+}
+.enam-2 {
+    top: 50%;
+    left: 20%;
+}
+
+.enam-5 {
+    top: 50%;
+    left: 80%;
+}
+
+.show-1 {
+    transform: rotateZ(-720deg) rotateZ(-720deg); }
+.show-2 {
+    transform: rotateX(450deg) rotateZ(-720deg); }
+  
+.show-6 {
+    transform: rotateX(-900deg) rotateZ(1080deg); }
+  
+.show-3 {
+    transform: rotateY(-450deg) rotateZ(-1440deg); }
+  
+.show-4 {
+    transform: rotateY(810deg) rotateZ(720deg); }
+  
+.show-5 {
+    transform: rotateX(-810deg) rotateZ(-1080deg); }
+  
